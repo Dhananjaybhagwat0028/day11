@@ -1,11 +1,7 @@
-async function sum(n1, n2) {
-  // ...
-  return n1 + n2;
-}
-
+import { readFile } from "node:fs/promises";
 async function main() {
-  let result = await sum(33, 11);
-  console.log(result);
+  let filePath = "package.json";
+  let fileData = await readFile(filePath);
+  console.log(fileData);
 }
-
 main();

@@ -1,9 +1,12 @@
-// How to read a file using NodeJS?
-// this is a internal module.
-import { readFileSync } from "node:fs";
+console.log("Hello 1");
+console.log("Hello 2");
 
+// is it blocking the next two stament ?
+// this is non blocking
+// non blocking helps to achive async prog
+setTimeout(() => {
+  console.log("Hello 3");
+}, 0);
 
-let filePath = "D:\CDAC_23\M6_WPT\day11\package.json"
-//  let filedata = readFileSync(filePath);
-let fileData = readFileSync(filePath, { encoding: "utf-8" });
-console.log(filedata);
+console.log("Hello 4");
+console.log("Hello 5");
